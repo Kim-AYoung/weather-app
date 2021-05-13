@@ -1,11 +1,18 @@
 import logo from '../logo.svg';
 
-function Header() {
+function Header(props) {
+
+  // const city = 'Seoul';
+  console.log(props);
+  const city = props.city;
+  const region = props.region;
+
   return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          리액트의 첫 화면이다.
+          도시는: {city}, 
+          지역은: {region}
         </p>
         <a
           className="App-link"
