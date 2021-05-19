@@ -2,17 +2,18 @@ import logo from '../logo.svg';
 
 function Header(props) {
 
-  // const city = 'Seoul';
-  console.log(props);
-  const city = props.city;
+  console.log("Header props: ", props);
+  const city = props.cityName;
   const region = props.region;
 
   return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+          현재 
           도시는: {city}, 
-          지역은: {region}
+          지역은: {region} 
+          입니다.
         </p>
         <a
           className="App-link"
